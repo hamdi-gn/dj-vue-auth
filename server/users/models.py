@@ -15,7 +15,7 @@ def get_file_path2(instance, filename):
     return os.path.join('images/cover_images', filename)
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, username, password=None):
+    def create_user(self, email, username, password):
         user = self.model(
             email = self.normalize_email(email),
             username = username,
@@ -24,7 +24,7 @@ class UserManager(BaseUserManager):
         user.save(using = self._db)
         return user
 
-    def create_superuser(self, email, username, password=None):
+    def create_superuser(self, email, username, password):
         user = self.create_user(
             email= email,
             username= username,
@@ -38,8 +38,8 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser):
     email = models.EmailField(null=False, max_length=100,unique=True)
     username = models.CharField(max_length=10, unique=True)
-    profile_image = models.ImageField(upload_to= get_file_path1, height_field=None, width_field=None, max_length=None, blank=True, null=True)
-    cover_image = models.ImageField(upload_to= get_file_path2, height_field=None, width_field=None, max_length=None, blank=True, null=True)
+    profile_image = models.ImageField(upload_to= get_file_path1, blank=True, null=True)
+    cover_image = models.ImageField(upload_to= get_file_path2, blank=True, null=True)
     first_name = models.CharField(max_length=100, blank=True, null=True)
     last_name = models.CharField(max_length=100, blank=True, null=True)
     birthday = models.DateField(auto_now=False, auto_now_add=False, blank=True, null=True)
@@ -68,7 +68,7 @@ class User(AbstractBaseUser):
     objects = UserManager()
 
     def __str__(self):
-        return self.email + ", " + self.first_name
+        return self.username
     
     def has_perm(self, perm, obj = None):
         return self.is_admin
