@@ -1,0 +1,37 @@
+{
+  "data": [ 
+    {
+      "path": "/dashboard",
+      "title": "Home",
+      "icon": "home",
+      "type": "link",
+      "active": false
+    },
+    {
+      "path": "/users",
+      "title": "users",
+      "icon": "users",
+      "type": "link",
+      "active": false
+    },
+    {
+      "title": "User",
+      "icon": "user",
+      "type": "sub",
+      "badgeType": "success",
+      "active": false,
+      "children": [
+        {
+          "path": "/user/profile",
+          "title": "Profile",
+          "type": "link"
+        },
+        {
+          "path": "/user/edit",
+          "title": "Edit",
+          "type": "link"
+        }
+      ]
+    }
+  ]
+}
