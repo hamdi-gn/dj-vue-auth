@@ -157,11 +157,30 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
 
-ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 SITE_ID = 1
 
 OLD_PASSWORD_FIELD_ENABLED = True
 
 LOGOUT_ON_PASSWORD_CHANGE = False
+
+AUTHENTICATION_BACKENDS = [
+    'allauth.account.auth_backends.AuthenticationBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mediterraneandevclub@gmail.com'
+EMAIL_HOST_PASSWORD = 'HelloWorld456*-+'
+EMAIL_PORT = 587
+
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+
+LOGIN_URL = 'http://127.0.0.1:8000/dj-rest-auth/login'
 

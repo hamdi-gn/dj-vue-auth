@@ -46,6 +46,7 @@
                               Email is required
                             </div>
                           </div>
+    
                           <div class="form-group">
                             <label class="col-form-label">Password</label>
                             <input
@@ -67,12 +68,11 @@
                             </div>
                           </div>
                           <div class="form-group mb-0">
-                            <div class="checkbox p-0">
-                              <input id="checkbox1" type="checkbox" />
-                              <label class="text-muted" for="checkbox1"
-                                >Remember password</label
-                              >
-                            </div>
+                            <p  class="mt-3 mb-2">
+                              <router-link class="md-2" tag="a" to="/resetpassword" >
+                              Forgot password
+                            </router-link>
+                            </p>
                             <button
                               class="btn btn-primary btn-block"
                               type="button"
@@ -119,6 +119,7 @@
                   </b-tabs>
                 </b-card>
               </div>
+
             </div>
           </div>
         </div>
@@ -129,8 +130,11 @@
 </template>
 
 <script>
+
 import axios from 'axios';
+
 export default {
+
   data() {
     return {
       email: '',
@@ -148,7 +152,7 @@ export default {
           })
         .then((response) => {
           localStorage.setItem('access_token', response.data.key);
-          this.$router.push({name: 'dashboard'});
+          this.$router.push('/dashboard');
           this.$notify.success('Login success');
         }) 
         .catch((error) => { 

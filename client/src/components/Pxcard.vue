@@ -67,7 +67,7 @@
 
 <script>
 export default {
-  name: "px-card",
+  name: 'px-card',
   props: {
     title: String,
     actions: {
@@ -87,7 +87,7 @@ export default {
       return this.title;
     },
     showAction() {
-      return this.$slots.headerAction || this.actions
+      return this.$slots.headerAction || this.actions;
     }
   },
   methods: {

@@ -8,6 +8,8 @@ import Error404 from '../pages/error_404';
 /* Authentication */
 import login from '../auth/login';
 import Register from '../auth/register';
+import ResetPassword from '../auth/reset_password';
+
 
 /* User Profile */
 import UserProfile from '../pages/users/profile';
@@ -59,6 +61,14 @@ const routes = [
     component: Register,
     meta: {
       title: 'Register | Endless - Premium Admin Template',
+    }
+  },
+  {
+    path:'/resetpassword',
+    name:'ResetPassword',
+    component:ResetPassword,
+    meta: {
+      title: 'ResetPassword | Cuba - Premium Admin Template',
     }
   },
   {
