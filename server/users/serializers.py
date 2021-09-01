@@ -1,6 +1,9 @@
 from rest_framework import  serializers
 from .models import User
 from rest_framework.authtoken.models import Token
+from django.conf import settings
+from django.utils.translation import gettext as _
+from dj_rest_auth.serializers import PasswordResetSerializer
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,3 +22,4 @@ class UserSerializer2(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         Token.objects.create(user=user)
         return user
+

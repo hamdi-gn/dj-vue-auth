@@ -183,4 +183,3 @@ EMAIL_PORT = 587
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 
 LOGIN_URL = 'http://127.0.0.1:8000/dj-rest-auth/login'
-
