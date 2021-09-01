@@ -111,7 +111,7 @@ export default {
           })
         .then(() => {
           this.$router.push({name: 'login'});
-          //this.$notify.success('Registration success');
+          this.$notify.success('Registration success');
         }) 
         .catch((error) => { 
           console.log('error message: ', error.response.data.password1);

@@ -99,10 +99,6 @@
                             <input class="form-control" type="number" placeholder="ZIP Code" v-model="userdata.postal_code">
                           </div>
                         </div>
-                          <div class="mb-2">
-                            <div class="col-form-label">Country</div>
-                            <multiselect class="form-control" v-model="userdata.country" :options="countries" label="name" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
-                        </div>
                         <div class="col-md-12">
                           <div class="form-group mb-0">
                             <label class="form-label">About Me</label>
