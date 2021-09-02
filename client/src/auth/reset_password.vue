@@ -108,6 +108,8 @@ export default {
           },
         ).then(()=>{
           this.$notify.success('Password changed succesfully');
+          this.$router.push({name:'login'});
+
         })
         .catch(()=>{
           this.$notify.error('Error, try again ..');

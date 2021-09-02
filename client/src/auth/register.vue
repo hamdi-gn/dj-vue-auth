@@ -110,7 +110,7 @@ export default {
             password2: this.password2
           })
         .then(() => {
-          this.$router.push({name: 'login'});
+          this.$router.push({name:'login'});
           this.$notify.success('Registration success');
         }) 
         .catch((error) => { 

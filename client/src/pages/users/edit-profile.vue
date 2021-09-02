@@ -57,6 +57,12 @@
                             <input class="form-control" type="text" placeholder="Last Name" v-model="userdata.last_name">
                           </div>
                         </div>
+                        <div class="col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <label class="form-label">Profession</label>
+                            <input class="form-control" type="text" placeholder="Profession" v-model="userdata.profession">
+                          </div>
+                        </div>
                         <div class="col-md-5">
                           <div class="form-group">
                             <label class="form-label">Phone Number</label>
@@ -197,6 +203,7 @@ export default {
             cover_image: this.userdata.cover_image,
             first_name: this.userdata.first_name,
             last_name: this.userdata.last_name,
+            profession: this.userdata.profession,
             username: this.userdata.username,
             birthday: this.userdata.birthday,
             email: this.userdata.email,
