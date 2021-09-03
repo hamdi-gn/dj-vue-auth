@@ -91,7 +91,7 @@ export default {
   methods: {
     async getUser(){
       await axios
-        .get('http://127.0.0.1:8000/dj-rest-auth/user/',
+        .get('/dj-rest-auth/user/',
           {
             headers:{
               'Content-Type': 'application/json',

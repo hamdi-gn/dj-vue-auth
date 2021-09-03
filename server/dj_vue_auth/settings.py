@@ -52,6 +52,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
+
 ]
 
 MIDDLEWARE = [
@@ -83,6 +87,9 @@ AUTH_USER_MODEL = 'users.User'
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'users.serializers.UserSerializer',
+}
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'users.serializers.RegisterSerializer',
 } 
 
 TEMPLATES = [
@@ -176,8 +183,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'optional'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'mediterraneandevclub@gmail.com'
-EMAIL_HOST_PASSWORD = 'HelloWorld456*-+'
+EMAIL_HOST_USER = 'dj.vue.js@gmail.com'
+EMAIL_HOST_PASSWORD = '11629976Hello123*@//;'
 EMAIL_PORT = 587
 
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True

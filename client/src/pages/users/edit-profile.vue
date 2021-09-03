@@ -150,13 +150,10 @@
 </template>
 
 <script>
-import Multiselect from 'vue-multiselect';
 import axios from 'axios';
 
 export default {
-  components: {
-    Multiselect
-  },
+
   data() {
     return {
       userdata: [],

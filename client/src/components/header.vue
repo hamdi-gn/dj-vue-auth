@@ -123,10 +123,19 @@
         </li>
         <li class="profile-nav onhover-dropdown p-0 mr-0">
           <div class="media profile-media">
-            <img
+            <img v-if="userdata.profile_image"
+              class="b-r-10"
+              :src="`${'../../../../server/images/profile_images/',userdata.profile_image}`"
+              alt=""
+              height="37px"
+              width="37px"
+            />
+            <img v-else
               class="b-r-10"
               src="../assets/images/dashboard/profile.jpg"
               alt=""
+              height="37px"
+              width="37px"
             />
             <div class="media-body">
               <span> {{userdata.first_name}} {{userdata.last_name}} </span>

@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Body from '../components/body';
-import SamplePage from '../pages/sample_page';
+import SamplePage from '../pages/home';
 import Error404 from '../pages/error_404';
 
 /* Authentication */
