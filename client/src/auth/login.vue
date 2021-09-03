@@ -145,7 +145,7 @@ export default {
     // login
     async Login(){
       await axios
-        .post('http://127.0.0.1:8000/dj-rest-auth/login/',
+        .post('https://dj-vue-js.herokuapp.com/dj-rest-auth/login/',
           {
             email: this.email,
             password: this.password

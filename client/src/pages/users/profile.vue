@@ -91,7 +91,7 @@ export default {
   methods: {
     async getUser(){
       await axios
-        .get('/dj-rest-auth/user/',
+        .get('https://dj-vue-js.herokuapp.com/dj-rest-auth/user/',
           {
             headers:{
               'Content-Type': 'application/json',

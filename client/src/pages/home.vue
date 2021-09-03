@@ -31,7 +31,7 @@ export default {
   methods :{
     async getUsers(){
       await axios
-        .get('http://localhost:8080/users/',
+        .get('https://dj-vue-js.herokuapp.com/users/',
           {
             headers:{
               'Content-Type': 'application/json',

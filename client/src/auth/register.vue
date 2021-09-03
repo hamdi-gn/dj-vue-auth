@@ -102,7 +102,7 @@ export default {
     // regiter
     async Register(){
       await axios
-        .post('http://127.0.0.1:8000/dj-rest-auth/registration/',
+        .post('https://dj-vue-js.herokuapp.com/registration/',
           {
             username: this.username,
             email: this.email,

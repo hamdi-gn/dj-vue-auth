@@ -218,7 +218,7 @@ export default {
   methods: {
     async getUser(){
       await axios
-        .get('/dj-rest-auth/user/',
+        .get('https://dj-vue-js.herokuapp.com/dj-rest-auth/user/',
           {
             headers:{
               'Content-Type': 'application/json',
@@ -234,7 +234,7 @@ export default {
     },
     async Logout(){
       await axios
-        .post('http://127.0.0.1:8000/dj-rest-auth/logout/')
+        .post('https://dj-vue-js.herokuapp.com/dj-rest-auth/logout/')
         .then(() => {
           localStorage.clear(),
           this.$router.push({ name: 'login' });

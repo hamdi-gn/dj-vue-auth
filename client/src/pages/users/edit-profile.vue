@@ -163,7 +163,7 @@ export default {
   methods: {
     async getUser(){
       await axios
-        .get('/dj-rest-auth/user/',
+        .get('https://dj-vue-js.herokuapp.com/dj-rest-auth/user/',
           {
             headers:{
               'Content-Type': 'application/json',
@@ -194,7 +194,7 @@ export default {
     },
     async updateUser(){
       await axios
-        .put('/dj-rest-auth/user/',
+        .put('https://dj-vue-js.herokuapp.com/dj-rest-auth/user/',
           {
             profile_image: this.userdata.profile_image,
             cover_image: this.userdata.cover_image,
