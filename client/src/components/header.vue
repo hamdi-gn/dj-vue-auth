@@ -82,22 +82,7 @@
       </div>
     </div>
     <div class="left-header col horizontal-wrapper pl-0">
-      <ul class="horizontal-menu">
-        <li class="mega-menu outside">
-          <a
-            class="nav-link"
-            href="javascript:void(0);"
-          >
-            <feather type="layers"></feather><span>Bonus Ui</span>
-          </a>
-        </li>
-        <li class="level-menu outside">
-          <a class="nav-link" href="#">
-            <feather type="inbox"></feather>
-            <span>Level Menu</span></a
-          >
-        </li>
-      </ul>
+
     </div>
     <div class="nav-right col-8 pull-right right-header p-0">
       <ul class="nav-menus">

@@ -23,9 +23,27 @@
                   <h4>Create your account</h4>
                   <p>Enter your personal details to create account</p>
                   <div class="form-group">
+                    <label class="col-form-label">First Name</label>
+                    <div class="form-row">
+                        <input class="form-control" type="text" v-model="first_name" required="" placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Last Name</label>
+                    <div class="form-row">
+                        <input class="form-control" type="text" v-model="last_name" required="" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label class="col-form-label">Your Username</label>
                     <div class="form-row">
                         <input class="form-control" type="text" v-model="username" required="" placeholder="Username">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Your Profession</label>
+                    <div class="form-row">
+                        <input class="form-control" type="text" v-model="profession" required="" placeholder="Profession">
                     </div>
                   </div>
                   <div class="form-group">
@@ -92,6 +110,9 @@ import axios from 'axios';
 export default {
   data() {
     return {
+      first_name: '',
+      last_name: '',
+      profession: 'Hamdi',
       username: '',
       email: '',
       password1: '',
@@ -102,9 +123,12 @@ export default {
     // regiter
     async Register(){
       await axios
-        .post('https://dj-vue-js.herokuapp.com/registration/',
+        .post('https://dj-vue-js.herokuapp.com/dj-rest-auth/registration/',
           {
             username: this.username,
+            first_name: this.first_name,
+            last_name: this.last_name,
+            profession: this.profession,
             email: this.email,
             password1: this.password1,
             password2: this.password2
@@ -114,7 +138,6 @@ export default {
           this.$notify.success('Registration success');
         }) 
         .catch((error) => { 
-          console.log('error message: ', error.response.data.password1);
           this.$notify.error(error.response.headers+' , try again ..');
         });		 
     }

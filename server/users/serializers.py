@@ -45,9 +45,9 @@ class RegisterSerializer(serializers.ModelSerializer):
         required=allauth_settings.USERNAME_REQUIRED,
     )
     email = serializers.EmailField(required=allauth_settings.EMAIL_REQUIRED)
-    first_name = serializers.CharField()
-    last_name = serializers.CharField()
-    profession = serializers.CharField()
+    first_name = serializers.CharField(required=True)
+    last_name = serializers.CharField(required=True)
+    profession = serializers.CharField(required=True)
     password1 = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
 
@@ -73,7 +73,10 @@ class RegisterSerializer(serializers.ModelSerializer):
         return data
 
     def custom_signup(self, request, user):
-        pass
+        user.first_name = self.validated_data.get('first_name', '')
+        user.last_name = self.validated_data.get('last_name', '')
+        user.profession = self.validated_data.get('profession', '')
+        user.save(update_fields=['first_name', 'last_name', 'profession'])
 
     def get_cleaned_data(self):
         return {
