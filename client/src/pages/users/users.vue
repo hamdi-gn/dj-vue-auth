@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Breadcrumbs main="Users" title="User Cards"/>
+    <Breadcrumbs main="Users" title="Users list"/>
     <!-- Container-fluid starts-->
     <div class="container-fluid">
       <div class="row user-cards" >

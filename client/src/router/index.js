@@ -14,7 +14,7 @@ import ResetPassword from '../auth/reset_password';
 /* User Profile */
 import UserProfile from '../pages/users/profile';
 import UserEditProfile from '../pages/users/edit-profile';
-import UserCards from '../pages/users/cards';
+import UserCards from '../pages/users/users';
 
 
 // component
